@@ -11,6 +11,11 @@ interface Sync<T> {
   save(data: T): AxiosPromise;
 }
 
+interface Events {
+  on(event: string, callback: () => void): void;
+  trigger(event: string): void;
+}
+
 export class Model {
   constructor(private attributes: Attributes, private sync: Sync, private events) {}
 
