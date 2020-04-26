@@ -13,4 +13,10 @@ export class User {
   static createUserCollection(): Collection {
     return new Collection(baseUrl, User.createUser);
   }
+
+  setAge(): void {
+    const age = Math.round(Math.random() * 100);
+
+    this.set({ age });
+  }
 }
