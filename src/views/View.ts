@@ -30,4 +30,8 @@ export abstract class View {
       }
     }
   }
+
+  eventsMap(): { [eventProperty: string]: () => void } {
+    return {};
+  }
 }
