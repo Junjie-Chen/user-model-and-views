@@ -1,9 +1,14 @@
-import { AxiosResponse } from 'axios';
+import { AxiosPromise, AxiosResponse } from 'axios';
 
 interface Attributes<T> {
   get<K extends keyof T>(property: K): T[K];
   getAll(): T;
   set(value: T): void;
+}
+
+interface Sync<T> {
+  fetch(id: number): AxiosPromise;
+  save(data: T): AxiosPromise;
 }
 
 export class Model {
