@@ -20,7 +20,7 @@ interface HasId {
   id?: number;
 }
 
-export class Model<T> {
+export class Model<T extends HasId> {
   constructor(private attributes: Attributes<T>, private sync: Sync<T>, private events: Events) {}
 
   get = this.attributes.get;
