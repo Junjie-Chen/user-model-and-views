@@ -4,4 +4,8 @@ export class Attributes {
   get = property => {
     return this.data[property];
   };
+
+  getAll = () => {
+    return this.data;
+  };
 }
