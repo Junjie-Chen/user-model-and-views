@@ -6,4 +6,8 @@ export class Collection {
   events: Events = new Events();
 
   constructor(public baseUrl: string, public deserialize) {}
+
+  get on() {
+    return this.events.on;
+  }
 }
