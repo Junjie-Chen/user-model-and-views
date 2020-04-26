@@ -1,13 +1,13 @@
 import axios, { AxiosPromise } from 'axios';
 
-export class ApiSync {
+export class ApiSync<T> {
   constructor(public baseUrl: string) {}
 
   fetch(id: number): AxiosPromise {
     return axios.get(`${this.baseUrl}/${id}`);
   }
 
-  save(data): AxiosPromise {
+  save(data: T): AxiosPromise {
     const { id } = data;
 
     if (id) {
