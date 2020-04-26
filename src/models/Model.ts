@@ -7,7 +7,7 @@ interface Attributes<T> {
 }
 
 export class Model {
-  constructor(private attributes, private sync, private events) {}
+  constructor(private attributes: Attributes, private sync, private events) {}
 
   get = this.attributes.get;
 
