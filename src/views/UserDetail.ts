@@ -1,6 +1,7 @@
 import { View } from './View';
+import { User, Properties } from '../models/User';
 
-export class UserDetail extends View {
+export class UserDetail extends View<User, Properties> {
   template(): string {
     return `
       <div>
