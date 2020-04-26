@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Junjie-Chen/user-model-and-views/issues"
   },
-  "homepage": "https://github.com/Junjie-Chen/user-model-and-views#readme"
+  "homepage": "https://github.com/Junjie-Chen/user-model-and-views#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }
