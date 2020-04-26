@@ -12,13 +12,13 @@ export interface Properties {
 
 const baseUrl = 'http://localhost:3000/users';
 
-export class User extends Model {
-  static createUser(data): User {
-    return new User(new Attributes(data), new ApiSync(baseUrl), new Events());
+export class User extends Model<Properties> {
+  static createUser(data: Properties): User {
+    return new User(new Attributes<Properties>(data), new ApiSync<Properties>(baseUrl), new Events());
   }
 
-  static createUserCollection(): Collection {
-    return new Collection(baseUrl, User.createUser);
+  static createUserCollection(): Collection<User, Properties> {
+    return new Collection<User, Properties>(baseUrl, User.createUser);
   }
 
   setAge(): void {
