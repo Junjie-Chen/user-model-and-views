@@ -1,12 +1,12 @@
 import axios, { AxiosResponse } from 'axios';
 import { Events } from './Events';
 
-export class Collection {
-  models: [] = [];
+export class Collection<T, K> {
+  models: T[] = [];
 
   events: Events = new Events();
 
-  constructor(public baseUrl: string, public deserialize) {}
+  constructor(public baseUrl: string, public deserialize: (data: K) => T) {}
 
   get on() {
     return this.events.on;
@@ -19,7 +19,7 @@ export class Collection {
   fetch(): void {
     axios.get(this.baseUrl)
       .then((response: AxiosResponse): void => {
-        response.data.forEach((data): void => {
+        response.data.forEach((data: K): void => {
           this.models.push(this.deserialize(data));
         });
 
