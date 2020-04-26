@@ -17,7 +17,7 @@ interface Events {
 }
 
 export class Model {
-  constructor(private attributes: Attributes, private sync: Sync, private events) {}
+  constructor(private attributes: Attributes, private sync: Sync, private events: Events) {}
 
   get = this.attributes.get;
 
