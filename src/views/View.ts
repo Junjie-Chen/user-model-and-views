@@ -10,4 +10,6 @@ export abstract class View {
       this.render();
     });
   }
+
+  abstract template(): string;
 }
