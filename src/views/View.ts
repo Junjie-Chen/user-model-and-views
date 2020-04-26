@@ -1,4 +1,6 @@
-export abstract class View<T> {
+import { Model } from '../models/Model';
+
+export abstract class View<T extends Model<K>, K> {
   regions: { [regionProperty: string]: Element } = {};
 
   constructor(public parent: Element, public model: T) {
