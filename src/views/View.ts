@@ -18,4 +18,16 @@ export abstract class View {
   regionsMap(): { [regionProperty: string]: string } {
     return {};
   }
+
+  mapRegions(fragment: DocumentFragment): void {
+    const mapRegions = this.regionsMap();
+
+    for (let regionProperty in mapRegions) {
+      const element = fragment.querySelector(mapRegions[regionProperty]);
+
+      if (element) {
+        this.regions[regionProperty] = element;
+      }
+    }
+  }
 }
