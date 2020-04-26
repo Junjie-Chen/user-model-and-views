@@ -24,4 +24,15 @@ export class UserUpdate {
       'click:.save-user': this.onSaveUserClick
     };
   }
+
+  template(): string {
+    return `
+      <div>
+        <input placeholder="${this.model.get('name')}" />
+        <button class="set-name">Set Name</button>
+        <button class="set-age">Set Age</button>
+        <button class="save-user">Save User</button>
+      </div>
+    `;
+  }
 }
