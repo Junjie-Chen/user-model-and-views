@@ -12,4 +12,6 @@ export abstract class View {
   }
 
   abstract template(): string;
+
+  onRender(): void {}
 }
