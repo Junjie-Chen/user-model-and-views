@@ -16,14 +16,14 @@ interface Events {
   trigger(event: string): void;
 }
 
-export class Model {
-  constructor(private attributes: Attributes, private sync: Sync, private events: Events) {}
+export class Model<T> {
+  constructor(private attributes: Attributes<T>, private sync: Sync<T>, private events: Events) {}
 
   get = this.attributes.get;
 
   getAll = this.attributes.getAll;
 
-  set(value): void {
+  set(value: T): void {
     this.attributes.set(value);
 
     this.trigger('change');
