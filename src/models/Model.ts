@@ -40,4 +40,6 @@ export class Model {
         this.trigger('error');
       });
   }
+
+  on = this.events.on;
 }
