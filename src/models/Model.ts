@@ -16,6 +16,10 @@ interface Events {
   trigger(event: string): void;
 }
 
+interface HasId {
+  id?: number;
+}
+
 export class Model<T> {
   constructor(private attributes: Attributes<T>, private sync: Sync<T>, private events: Events) {}
 
