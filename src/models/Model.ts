@@ -12,7 +12,7 @@ interface Sync<T> {
 }
 
 export class Model {
-  constructor(private attributes: Attributes, private sync, private events) {}
+  constructor(private attributes: Attributes, private sync: Sync, private events) {}
 
   get = this.attributes.get;
 
