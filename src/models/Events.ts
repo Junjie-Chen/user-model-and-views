@@ -10,4 +10,16 @@ export class Events {
 
     this.events[event] = handlers;
   };
+
+  trigger = (event: string): void => {
+    const handlers = this.events[event];
+
+    if (!handlers || !handlers.length) {
+      return;
+    }
+
+    handlers.forEach(callback => {
+      callback();
+    });
+  };
 }
