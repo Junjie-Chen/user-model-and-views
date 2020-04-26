@@ -8,4 +8,8 @@ export class Attributes {
   getAll = () => {
     return this.data;
   };
+
+  set(value): void {
+    Object.assign(this.data, value);
+  }
 }
