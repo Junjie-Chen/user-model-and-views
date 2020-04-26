@@ -1,3 +1,3 @@
 export class Model {
-  constructor(private attributes) {}
+  constructor(private attributes, private sync) {}
 }
