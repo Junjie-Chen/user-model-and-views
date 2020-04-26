@@ -10,4 +10,8 @@ export class Collection {
   get on() {
     return this.events.on;
   }
+
+  get trigger() {
+    return this.events.trigger;
+  }
 }
