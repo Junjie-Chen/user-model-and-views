@@ -4,4 +4,10 @@ export class Model {
   get = this.attributes.get;
 
   getAll = this.attributes.getAll;
+
+  set(value): void {
+    this.attributes.set(value);
+
+    this.trigger('change');
+  }
 }
