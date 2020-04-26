@@ -29,4 +29,15 @@ export class Model {
         this.trigger('error');
       });
   }
+
+  save(): void {
+    this.sync
+      .save(this.getAll())
+      .then((response: AxiosResponse): void => {
+        this.trigger('save');
+      })
+      .catch(() => {
+        this.trigger('error');
+      });
+  }
 }
