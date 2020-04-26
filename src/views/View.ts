@@ -1,7 +1,7 @@
-export abstract class View {
+export abstract class View<T> {
   regions: { [regionProperty: string]: Element } = {};
 
-  constructor(public parent: Element, public model) {
+  constructor(public parent: Element, public model: T) {
     this.onModelChange();
   }
 
