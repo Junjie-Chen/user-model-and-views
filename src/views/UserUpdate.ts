@@ -12,4 +12,8 @@ export class UserUpdate {
   onSetAgeClick = (): void => {
     this.model.setAge();
   };
+
+  onSaveUserClick = (): void => {
+    this.model.save();
+  };
 }
