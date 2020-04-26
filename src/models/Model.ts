@@ -1,5 +1,11 @@
 import { AxiosResponse } from 'axios';
 
+interface Attributes<T> {
+  get<K extends keyof T>(property: K): T[K];
+  getAll(): T;
+  set(value: T): void;
+}
+
 export class Model {
   constructor(private attributes, private sync, private events) {}
 
