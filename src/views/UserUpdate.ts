@@ -8,4 +8,8 @@ export class UserUpdate {
       this.model.set({ name });
     }
   };
+
+  onSetAgeClick = (): void => {
+    this.model.setAge();
+  };
 }
