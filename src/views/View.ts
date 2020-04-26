@@ -47,4 +47,20 @@ export abstract class View {
         });
     }
   }
+
+  render(): void {
+    this.parent.innerHTML = '';
+
+    const template = document.createElement('template');
+
+    template.innerHTML = this.template();
+
+    this.bindEvents(template.content);
+
+    this.mapRegions(template.content);
+
+    this.onRender();
+
+    this.parent.append(template.content);
+  }
 }
