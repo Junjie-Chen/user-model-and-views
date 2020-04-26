@@ -4,6 +4,7 @@
   "description": "_Render, set and save a collection of user names and ages by extending views and models from abstract and generic classes_",
   "main": "index.js",
   "scripts": {
+    "build": "parcel build public/index.html",
     "dev": "parcel public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
