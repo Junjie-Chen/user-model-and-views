@@ -16,4 +16,12 @@ export class UserUpdate {
   onSaveUserClick = (): void => {
     this.model.save();
   };
+
+  eventsMap(): { [eventProperty: string]: () => void } {
+    return {
+      'click:.set-name': this.onSetNameClick,
+      'click:.set-age': this.onSetAgeClick,
+      'click:.save-user': this.onSaveUserClick
+    };
+  }
 }
