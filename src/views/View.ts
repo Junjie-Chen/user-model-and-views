@@ -34,4 +34,17 @@ export abstract class View {
   eventsMap(): { [eventProperty: string]: () => void } {
     return {};
   }
+
+  bindEvents(fragment: DocumentFragment): void {
+    const eventsMap = this.eventsMap();
+
+    for (let eventProperty in eventsMap) {
+      const [event, selector] = eventProperty.split(':');
+
+      fragment.querySelectorAll(selector)
+        .forEach((element: Element): void => {
+          element.addEventListener(event, eventsMap[eventProperty]);
+        });
+    }
+  }
 }
