@@ -1,6 +1,7 @@
 import { View } from './View';
+import { User, Properties } from '../models/User';
 
-export class UserUpdate extends View {
+export class UserUpdate extends View<User, Properties> {
   onSetNameClick = (): void => {
     const input = this.parent.querySelector('input');
 
