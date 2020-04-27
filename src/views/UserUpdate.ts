@@ -1,4 +1,6 @@
-export class UserUpdate {
+import { View } from './View';
+
+export class UserUpdate extends View {
   onSetNameClick = (): void => {
     const input = this.parent.querySelector('input');
 
