@@ -7,3 +7,5 @@ const secondUser = User.createUser({ name: 'Junjie Chen', age: 30 });
 firstUser.save();
 
 secondUser.save();
+
+const userCollection = User.createUserCollection();
