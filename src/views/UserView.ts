@@ -1,7 +1,8 @@
+import { View } from './View';
 import { UserDetail } from './UserDetail';
 import { UserUpdate } from './UserUpdate';
 
-export class UserView {
+export class UserView extends View {
   onRender(): void {
     new UserDetail(this.regions.userDetail, this.model).render();
 
