@@ -20,3 +20,5 @@ userCollection.on('change', () => {
     throw new Error('Root element was not found');
   }
 });
+
+userCollection.fetch();
