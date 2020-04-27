@@ -7,4 +7,11 @@ export class UserView {
 
     new UserUpdate(this.regions.userUpdate, this.model).render();
   }
+
+  regionsMap(): { [regionsProperty: string]: string } {
+    return {
+      'userDetail': '.user-detail',
+      'userUpdate': '.user-update'
+    };
+  }
 }
