@@ -11,10 +11,12 @@ secondUser.save();
 
 const userCollection = User.createUserCollection();
 
-const root = document.getElementById('root');
+userCollection.on('change', () => {
+  const root = document.getElementById('root');
 
-if (root) {
-  new UserCollectionView(root, userCollection).render();
-} else {
-  throw new Error('Root element was not found');
-}
+  if (root) {
+    new UserCollectionView(root, userCollection).render();
+  } else {
+    throw new Error('Root element was not found');
+  }
+});
