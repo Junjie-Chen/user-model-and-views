@@ -7,4 +7,6 @@ if (root) {
   const user = User.createUser({ name: 'Jingyan Li', age: 27 });
 
   new UserView(root, user).render();
+} else {
+  throw new Error('Root element was not found');
 }
