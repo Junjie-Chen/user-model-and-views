@@ -1,9 +1,9 @@
 import { Collection } from '../models/Collection';
 
-export abstract class CollectionView {
-  constructor(public parent: Element, public collection: Collection) {}
+export abstract class CollectionView<T, K> {
+  constructor(public parent: Element, public collection: Collection<T, K>) {}
 
-  abstract renderView(parent: Element, model): void;
+  abstract renderView(parent: Element, model: T): void;
 
   render(): void {
     this.parent.innerHTML = '';
