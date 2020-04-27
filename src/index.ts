@@ -15,4 +15,6 @@ const root = document.getElementById('root');
 
 if (root) {
   new UserCollectionView(root, userCollection).render();
+} else {
+  throw new Error('Root element was not found');
 }
