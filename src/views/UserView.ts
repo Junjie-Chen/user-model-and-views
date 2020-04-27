@@ -14,4 +14,13 @@ export class UserView {
       'userUpdate': '.user-update'
     };
   }
+
+  template(): string {
+    return `
+      <div>
+        <div class="user-detail"></div>
+        <div class="user-update"></div>
+      </div>
+    `;
+  }
 }
