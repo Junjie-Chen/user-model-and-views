@@ -13,4 +13,4 @@ const userCollection = User.createUserCollection();
 
 const root = document.getElementById('root');
 
-new UserCollectionView(root, userCollection);
+new UserCollectionView(root, userCollection).render();
